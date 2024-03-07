@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { cn } from '@/lib/utils';
+import { ThemeProvider } from '@/components';
 import './globals.css';
+
+type RootLayoutProps = Readonly<{
+  children: React.ReactNode;
+}>;
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,20 +17,18 @@ export const metadata: Metadata = {
   description: 'Portfolio of Dimas Hayat Pratama',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>): JSX.Element {
+export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
   return (
-    <html lang="en">
-      <body
-        className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          inter.variable,
-        )}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.variable}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

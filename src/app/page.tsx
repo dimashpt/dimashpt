@@ -1,3 +1,9 @@
+import { ThemeToggle } from '@/components';
+
 export default function Home(): JSX.Element {
-  return <main>Hello world!</main>;
+  return (
+    <main>
+      <ThemeToggle />
+    </main>
+  );
 }
