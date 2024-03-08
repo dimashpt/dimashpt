@@ -1,5 +1,5 @@
 import { Icons } from '@/assets';
-import { ThemeToggle } from '@/components';
+import { ThemeToggle } from '@/components/atoms';
 import Link from 'next/link';
 import { version } from '../../package.json';
 

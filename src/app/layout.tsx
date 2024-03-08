@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Space_Mono } from 'next/font/google';
-import { ThemeProvider } from '@/components';
+import { ThemeProvider } from '@/components/atoms';
 import './globals.css';
 
 type RootLayoutProps = Readonly<{
