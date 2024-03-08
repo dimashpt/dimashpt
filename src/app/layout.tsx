@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Space_Mono } from 'next/font/google';
 import { ThemeProvider } from '@/components';
 import './globals.css';
 
@@ -7,9 +7,9 @@ type RootLayoutProps = Readonly<{
   children: React.ReactNode;
 }>;
 
-const inter = Inter({
+const font = Space_Mono({
+  weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-sans',
 });
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.variable}>
+      <body className={font.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
