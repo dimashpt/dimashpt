@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --base: #F9F9FA;
+    --bgbase: #F9F9FA;
     --background: #FFFFFF;
     --foreground: #0C0C0C;
     --card: #FFFFFF;
@@ -28,7 +28,7 @@
   }
 
   .dark {
-    --base: #0C0C0C;
+    --bgbase: #0C0C0C;
     --background: #000000;
     --foreground: #F9F9FA;
     --card: #0C0C0C;
@@ -55,7 +55,7 @@
   }
 
   body {
-    @apply text-foreground flex font-sans antialiased justify-center items-center h-dvh w-full overflow-hidden bg-base;
+    @apply text-foreground flex font-sans antialiased justify-center items-center h-dvh w-full overflow-hidden bg-bgbase;
   }
 
   main {

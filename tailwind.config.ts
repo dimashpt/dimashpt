@@ -23,7 +23,7 @@ const config = {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
       colors: {
-        base: 'var(--base)',
+        bgbase: 'var(--bgbase)',
         border: 'var(--border)',
         input: 'var(--input)',
         ring: 'var(--ring)',

@@ -1,43 +1,40 @@
 'use client';
 
 import React from 'react';
-import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { Dropdown } from '@/components/ui';
+import Link from 'next/link';
+import { Icons } from '@/assets';
 
 type Props = {
   buttonClassName?: string;
 };
 
 const ThemeToggleComponent: React.FC<Props> = ({ buttonClassName }: Props) => {
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="link" size="icon">
-          {theme === 'light' ? <SunIcon /> : <MoonIcon />}
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>
+    <Dropdown.Menu>
+      <Dropdown.MenuTrigger asChild>
+        <Link
+          href="#"
+          className="flex items-center gap-x-1 px-2 py-1 hover:text-foreground text-muted-foreground transition-colors"
+        >
+          {resolvedTheme === 'light' ? <Icons.Sun /> : <Icons.Moon />}
+        </Link>
+      </Dropdown.MenuTrigger>
+      <Dropdown.MenuContent align="end">
+        <Dropdown.MenuItem onClick={() => setTheme('light')}>
           Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>
+        </Dropdown.MenuItem>
+        <Dropdown.MenuItem onClick={() => setTheme('dark')}>
           Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>
+        </Dropdown.MenuItem>
+        <Dropdown.MenuItem onClick={() => setTheme('system')}>
           System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+        </Dropdown.MenuItem>
+      </Dropdown.MenuContent>
+    </Dropdown.Menu>
   );
 };
 
