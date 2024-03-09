@@ -1,0 +1,29 @@
+{
+  "common": {
+    "name": "Dimas Hayat Pratama",
+    "username": "dimashpt",
+    "role": "Front End Developer"
+  },
+  "nav": {
+    "/": "_hello",
+    "/about": "_about.me",
+    "/contact": "_contact",
+    "/projects": "_projects",
+    "/articles": "_articles"
+  },
+  "/": {
+    "greeting": "Hi There! I am"
+  },
+  "/about": {
+    "greeting": "About Page"
+  },
+  "/contact": {
+    "greeting": "Contact Page"
+  },
+  "/projects": {
+    "greeting": "Projects Page"
+  },
+  "/articles": {
+    "greeting": "Articles Page"
+  }
+}

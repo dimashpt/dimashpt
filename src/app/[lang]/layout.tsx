@@ -1,13 +1,11 @@
+import '#/public/globals.css';
+import Favicon from '#/public/favicon.ico';
 import type { Metadata } from 'next';
 import { Space_Mono } from 'next/font/google';
 import { ThemeProvider } from '@/components/atoms';
 import { Footer, Header } from '@/components/organisms';
-import Favicon from '/public/favicon.ico';
-import './globals.css';
-
-type RootLayoutProps = Readonly<{
-  children: React.ReactNode;
-}>;
+import { languages } from '@/lib/i18n';
+import { dir } from 'i18next';
 
 const font = Space_Mono({
   weight: ['400', '700'],
@@ -23,9 +21,16 @@ export const metadata: Metadata = {
   icons: [{ rel: 'icon', url: Favicon.src }],
 };
 
-export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
+export async function generateStaticParams(): Promise<{ lang: string }[]> {
+  return languages.map((lang) => ({ lang }));
+}
+
+export default function RootLayout({
+  children,
+  params: { lang },
+}: BasePageProps): JSX.Element {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
       <body className={font.className}>
         <ThemeProvider
           attribute="class"
