@@ -28,7 +28,7 @@ export async function generateStaticParams(): Promise<{ lang: string }[]> {
 export default function RootLayout({
   children,
   params: { lang },
-}: BasePageProps): JSX.Element {
+}: BasePageProps & { children: React.ReactNode }): JSX.Element {
   return (
     <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
       <body className={font.className}>
