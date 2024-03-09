@@ -12,6 +12,7 @@ export const config = {
 export function middleware(req: NextRequest): NextResponse {
   const response = NextResponse.next();
   const reqLang = req.nextUrl.pathname.split('/')[1];
+  const pastLang = req.cookies.get(cookieName)?.value ?? fallbackLng;
   const isLanguageSupported = languages.includes(reqLang);
 
   // set x-pathname header
@@ -19,7 +20,7 @@ export function middleware(req: NextRequest): NextResponse {
 
   // set cookie
   if (!isLanguageSupported) {
-    return NextResponse.redirect(new URL(`/${fallbackLng}`, req.url));
+    return NextResponse.redirect(new URL(`/${pastLang}`, req.url));
   }
 
   response.cookies.set(cookieName, reqLang);
