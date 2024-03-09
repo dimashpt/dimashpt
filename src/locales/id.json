@@ -1,0 +1,36 @@
+{
+  "common": {
+    "name": "Dimas Hayat Pratama",
+    "username": "dimashpt",
+    "role": "Front End Developer"
+  },
+  "nav": {
+    "/": "_halo",
+    "/about": "_tentang.saya",
+    "/contact": "_kontak",
+    "/projects": "_project",
+    "/articles": "_artikel"
+  },
+  "/": {
+    "greeting": "Halo! Saya",
+    "code_comment": "// web ini juga bisa diakses di halaman GitHub saya",
+    "code_github": [
+      "const ",
+      "githubLink ",
+      "= ",
+      "https://github.com/dimashpt/dimashpt"
+    ]
+  },
+  "/about": {
+    "greeting": "Halaman Tentang Saya"
+  },
+  "/contact": {
+    "greeting": "Halaman Kontak"
+  },
+  "/projects": {
+    "greeting": "Halaman Project"
+  },
+  "/articles": {
+    "greeting": "Halaman Artikel"
+  }
+}

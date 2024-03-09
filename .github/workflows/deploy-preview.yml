@@ -4,6 +4,8 @@ on:
   pull_request:
     branches:
       - main
+    # Trigger only when ready for review, and when new commits are pushed
+    types: [ready_for_review, synchronize]
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
