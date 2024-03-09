@@ -6,6 +6,7 @@ import { GeistMono } from 'geist/font/mono';
 import { ThemeProvider } from '@/components/atoms';
 import { Footer, Header } from '@/components/organisms';
 import { dir } from 'i18next';
+import { AnimatePresence } from '@/components/molecules';
 
 type BaseLayoutProps = {
   children: React.ReactNode;
@@ -36,7 +37,7 @@ const RootLayout: NextPage<BaseLayoutProps> = ({
         >
           <main>
             <Header />
-            {children}
+            <AnimatePresence>{children}</AnimatePresence>
             <Footer />
           </main>
         </ThemeProvider>
