@@ -1,13 +1,12 @@
 import { useTranslation } from '@/lib/i18n';
+import { NextPage } from 'next';
 
-const RootPage: React.FC<BasePageProps> = async ({
-  params: { lang },
-}: BasePageProps) => {
-  const { t } = await useTranslation(lang, '/');
+const RootPage: NextPage = async () => {
+  const { t } = await useTranslation('home');
 
   return (
     <div className="content items-center justify-center">
-      <div className="flex flex-col">
+      <div className="flex flex-col px-5 md:px-0">
         <p className="text-sm md:text-base text-muted-foreground">
           {t('greeting')}
         </p>
