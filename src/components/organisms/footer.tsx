@@ -1,4 +1,5 @@
-import { FooterItem, ThemeToggle } from '../atoms';
+import { FooterItem } from '../atoms';
+import { LocaleToggle, ThemeToggle } from '../molecules';
 import { Icons } from '@/assets';
 import packageJson from '../../../package.json';
 
@@ -43,6 +44,7 @@ export const Footer: React.FC = () => {
         </FooterItem>
       </div>
       <div className="flex divide-x divide border-l">
+        <LocaleToggle />
         <ThemeToggle />
         {[socials[0]].map(({ icon: Icon, ...social }) => (
           <FooterItem key={social.link} href={social.link}>

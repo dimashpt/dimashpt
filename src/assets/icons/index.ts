@@ -9,6 +9,8 @@ import Facebook from './facebook.svg';
 import Tag from './tag.svg';
 import Cross from './cross.svg';
 import Warning from './warning.svg';
+import Indonesia from './indonesia.svg';
+import UnitedKingdom from './uk.svg';
 
 const Icons = {
   Moon,
@@ -22,6 +24,8 @@ const Icons = {
   X,
   Instagram,
   Facebook,
+  Indonesia,
+  UnitedKingdom,
 };
 
 export default Icons;
