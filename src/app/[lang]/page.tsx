@@ -5,7 +5,7 @@ const RootPage: NextPage = async () => {
   const { t } = await useTranslation('home');
 
   return (
-    <div className="content items-center justify-center">
+    <section className="flex flex-col flex-grow h-full w-full items-center justify-center">
       <div className="flex flex-col px-5 md:px-0">
         <p className="text-sm md:text-base text-muted-foreground">
           {t('greeting')}
@@ -26,7 +26,7 @@ const RootPage: NextPage = async () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

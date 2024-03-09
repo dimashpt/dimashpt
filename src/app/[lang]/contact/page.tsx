@@ -9,9 +9,9 @@ const ContactPage: NextPage = async () => {
   const { t } = await useTranslation('contact');
 
   return (
-    <div className="content items-center justify-center">
+    <section className="flex flex-col flex-grow h-full w-full items-center justify-center">
       <p>{t('greeting')}</p>
-    </div>
+    </section>
   );
 };
 

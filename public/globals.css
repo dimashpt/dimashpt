@@ -61,8 +61,4 @@
   main {
     @apply h-[calc(100dvh-10%)] w-[calc(100dvw-10%)] bg-background rounded-[--radius] border border-solid flex flex-col;
   }
-
-  main > .content {
-    @apply flex flex-col flex-grow;
-  }
 }
