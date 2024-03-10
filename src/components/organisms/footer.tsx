@@ -2,6 +2,7 @@ import { FooterItem } from '../atoms';
 import { LocaleToggle, ThemeToggle } from '../molecules';
 import { Icons } from '@/assets';
 import packageJson from '../../../package.json';
+import { useTranslation } from '@/lib/i18n';
 
 const socials = [
   {
@@ -31,11 +32,13 @@ const socials = [
   },
 ];
 
-export const Footer: React.FC = () => {
+export const Footer: React.FC = async () => {
+  const { t } = await useTranslation('common');
+
   return (
     <footer className="border-t text-xs flex items-center justify-between select-none relative">
       <div className="flex divide-x divide border-r">
-        <FooterItem href="#">
+        <FooterItem href="https://github.com/dimashpt/dimashpt" target="_blank">
           <Icons.Tag />v{packageJson.version}
         </FooterItem>
         <FooterItem href="#">
@@ -46,12 +49,10 @@ export const Footer: React.FC = () => {
       <div className="flex divide-x divide border-l">
         <LocaleToggle />
         <ThemeToggle />
-        {[socials[0]].map(({ icon: Icon, ...social }) => (
-          <FooterItem key={social.link} href={social.link}>
-            {social.username}
-            <Icon className="h-4 w-4" />
-          </FooterItem>
-        ))}
+        <FooterItem href="https://github.com/dimashpt" target="_blank">
+          {t('username')}
+          <Icons.GitHub className="h-4 w-4" />
+        </FooterItem>
       </div>
     </footer>
   );

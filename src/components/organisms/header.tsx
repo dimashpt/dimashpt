@@ -12,8 +12,8 @@ export const Header: React.FC = async () => {
   return (
     <nav className="md:grid grid-cols-12 border-b flex items-center justify-between relative overflow-x-auto">
       <Link
-        className="md:border-r md:px-5 px-2.5 py-4 text-foreground md:col-span-3 lg:col-span-2 shrink-0 transition-colors"
         href="/"
+        className="md:border-r md:px-5 px-2.5 py-4 text-foreground md:col-span-3 lg:col-span-2 shrink-0 transition-colors"
       >
         @{t('common:username')}
       </Link>

@@ -1,21 +1,15 @@
-import Link from 'next/link';
+import { ComponentProps } from 'react';
 
-type FooterItemProps = {
-  children: React.ReactNode;
-  href: string;
-};
-
-export const FooterItem: React.FC<FooterItemProps> = ({
+export const FooterItem: React.FC<ComponentProps<'a'>> = ({
   children,
-  href,
-}: FooterItemProps) => {
+  ...props
+}: ComponentProps<'a'>) => {
   return (
-    <Link
-      href={href}
-      target="_blank"
+    <a
       className="flex items-center gap-x-1 px-2 py-1 hover:text-foreground text-muted-foreground transition-colors"
+      {...props}
     >
       {children}
-    </Link>
+    </a>
   );
 };
