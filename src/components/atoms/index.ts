@@ -5,3 +5,4 @@ export * from './theme-provider';
 export * from './nav-item';
 export * from './footer-item';
 export * from './accordion';
+export * from './loading';

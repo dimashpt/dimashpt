@@ -2,17 +2,17 @@ import { Metadata, NextPage } from 'next';
 import { useTranslation } from '@/lib/i18n';
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'Education',
 };
 
-const AboutPage: NextPage = async () => {
+const AboutEducationPage: NextPage = async () => {
   const { t } = await useTranslation('about');
 
   return (
     <div id="tab-content" className="flex-grow p-5">
-      Bio
+      Education
     </div>
   );
 };
 
-export default AboutPage;
+export default AboutEducationPage;
