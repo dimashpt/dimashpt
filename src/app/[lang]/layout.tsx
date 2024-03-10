@@ -1,7 +1,8 @@
 import '#/public/globals.css';
 import Favicon from '#/public/favicon.ico';
 import type { Metadata, NextPage } from 'next';
-import { Space_Mono } from 'next/font/google';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 import { ThemeProvider } from '@/components/atoms';
 import { Footer, Header } from '@/components/organisms';
 import { dir } from 'i18next';
@@ -10,11 +11,6 @@ type BaseLayoutProps = {
   children: React.ReactNode;
   params: { lang: string };
 };
-
-const font = Space_Mono({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +27,7 @@ const RootLayout: NextPage<BaseLayoutProps> = ({
 }: BaseLayoutProps) => {
   return (
     <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
-      <body className={font.className}>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} font-mono`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

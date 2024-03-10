@@ -19,7 +19,7 @@ export const NavItem: React.FC<NavItemProps> = ({
     <li className="relative group">
       <Link
         href={href}
-        className="w-full h-full block py-4 px-5 transition-colors group-hover:text-foreground text-foreground"
+        className={`w-full h-full block py-4 px-5 transition-colors group-hover:text-foreground ${active ? 'text-foreground font-bold' : 'text-muted-foreground'}`}
       >
         {children}
       </Link>
