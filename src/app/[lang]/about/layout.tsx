@@ -34,7 +34,7 @@ const AboutLayout: NextPage<React.PropsWithChildren> = async ({
 }: React.PropsWithChildren) => {
   const { t } = await useTranslation('about');
   const lang = getLangFromPathname(headers().get('x-pathname')!);
-  const items: SidebarProps['items'] = [
+  const items: SidebarProps['sections'] = [
     {
       id: 'profile',
       label: t('menu.title_profile'),
@@ -70,7 +70,7 @@ const AboutLayout: NextPage<React.PropsWithChildren> = async ({
 
   return (
     <section className="w-full grid grid-cols-1 md:grid-cols-6 grid-flow-row-dense">
-      <Sidebar items={items} />
+      <Sidebar sections={items} />
       <div className="flex flex-col md:col-span-5">{children}</div>
     </section>
   );
