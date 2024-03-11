@@ -22,7 +22,15 @@
     ]
   },
   "about": {
-    "greeting": "About Page"
+    "menu": {
+      "title_profile": "Profile",
+      "title_contact": "Contact",
+      "item": {
+        "bio": "Bio",
+        "edu": "Education",
+        "exp": "Experience"
+      }
+    }
   },
   "contact": {
     "greeting": "Contact Page"

@@ -21,7 +21,6 @@ export const Header: React.FC = async () => {
         <NavMenu>
           <NavItem href={`/${lang}`}>{t('home')}</NavItem>
           <NavItem href={`/${lang}/about`}>{t('about')}</NavItem>
-          <NavItem href={`/${lang}/contact`}>{t('contact')}</NavItem>
           <NavItem href={`/${lang}/projects`}>{t('projects')}</NavItem>
           <NavItem href={`/${lang}/articles`}>{t('articles')}</NavItem>
         </NavMenu>

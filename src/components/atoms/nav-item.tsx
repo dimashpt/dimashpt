@@ -1,5 +1,7 @@
 'use client';
 
+import { cn } from '@/lib/utils';
+import { cva } from 'class-variance-authority';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -8,24 +10,50 @@ type NavItemProps = {
   children: React.ReactNode;
 };
 
+const link = cva(
+  'w-full h-full block py-4 px-5 transition-colors group-hover:text-foreground',
+  {
+    variants: {
+      active: {
+        true: 'text-foreground font-bold',
+        false: 'text-muted-foreground',
+      },
+    },
+    defaultVariants: {
+      active: false,
+    },
+  },
+);
+
+const indicator = cva(
+  'absolute bottom-0 bg-foreground transition-all group-hover:h-0.5 w-full',
+  {
+    variants: {
+      active: {
+        true: 'h-0.5',
+        false: 'h-0',
+      },
+    },
+    defaultVariants: {
+      active: false,
+    },
+  },
+);
+
 export const NavItem: React.FC<NavItemProps> = ({
   href,
   children,
 }: NavItemProps) => {
   const path = usePathname();
-  const active = path === href;
+  // match the active state based on the second part of the path
+  const active = path.split('/')[2] === href.split('/')[2];
 
   return (
     <li className="relative group">
-      <Link
-        href={href}
-        className={`w-full h-full block py-4 px-5 transition-colors group-hover:text-foreground ${active ? 'text-foreground font-bold' : 'text-muted-foreground'}`}
-      >
+      <Link href={href} className={cn(link({ active }))}>
         {children}
       </Link>
-      <div
-        className={`absolute bottom-0 bg-foreground transition-all ${active ? 'h-0.5' : 'h-0'} group-hover:h-0.5 w-full`}
-      />
+      <div className={cn(indicator({ active }))} />
     </li>
   );
 };

@@ -22,7 +22,15 @@
     ]
   },
   "about": {
-    "greeting": "Halaman Tentang Saya"
+    "menu": {
+      "title_profile": "Profil",
+      "title_contact": "Kontak",
+      "item": {
+        "bio": "Bio",
+        "edu": "Edukasi",
+        "exp": "Pengalaman"
+      }
+    }
   },
   "contact": {
     "greeting": "Halaman Kontak"
