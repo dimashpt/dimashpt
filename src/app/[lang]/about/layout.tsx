@@ -69,9 +69,11 @@ const AboutLayout: NextPage<React.PropsWithChildren> = async ({
   ];
 
   return (
-    <section className="w-full grid grid-cols-1 md:grid-cols-6 grid-flow-row-dense">
+    <section className="grid grid-cols-1 md:grid-cols-6 overflow-hidden h-full w-full">
       <Sidebar sections={items} />
-      <div className="flex flex-col md:col-span-5">{children}</div>
+      <section className="md:col-span-5 overflow-y-auto h-auto">
+        {children}
+      </section>
     </section>
   );
 };

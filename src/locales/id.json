@@ -14,12 +14,7 @@
   "home": {
     "greeting": "Halo! Saya",
     "code_comment": "// web ini juga bisa diakses di halaman GitHub saya",
-    "code_github": [
-      "const ",
-      "githubLink ",
-      "= ",
-      "https://github.com/dimashpt/dimashpt"
-    ]
+    "code_github": "const githubLink = \"https://github.com/dimashpt/dimashpt\""
   },
   "about": {
     "menu": {

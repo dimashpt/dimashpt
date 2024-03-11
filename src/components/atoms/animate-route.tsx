@@ -8,7 +8,7 @@ export const AnimateRoute: NextPage<React.PropsWithChildren> = ({
 }: React.PropsWithChildren) => {
   return (
     <motion.div
-      className="flex flex-grow"
+      className="flex-1"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -20, opacity: 0 }}

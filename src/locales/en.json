@@ -14,12 +14,7 @@
   "home": {
     "greeting": "Hi There! I am",
     "code_comment": "// you can also see it on my GitHub page",
-    "code_github": [
-      "const ",
-      "githubLink ",
-      "= ",
-      "https://github.com/dimashpt/dimashpt"
-    ]
+    "code_github": "const githubLink = \"https://github.com/dimashpt/dimashpt\""
   },
   "about": {
     "menu": {
