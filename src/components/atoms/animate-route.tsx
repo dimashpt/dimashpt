@@ -3,12 +3,17 @@
 import { NextPage } from 'next';
 import { motion } from 'framer-motion';
 
-export const AnimateRoute: NextPage<React.PropsWithChildren> = ({
+type AnimateRouteProps = React.PropsWithChildren<{
+  className?: string;
+}>;
+
+export const AnimateRoute: NextPage<AnimateRouteProps> = ({
   children,
-}: React.PropsWithChildren) => {
+  className,
+}: AnimateRouteProps) => {
   return (
     <motion.div
-      className="flex-1"
+      className={className}
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -20, opacity: 0 }}
