@@ -27,12 +27,12 @@ export const LocaleToggle: React.FC = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Link
+        <a
           href="#"
           className="flex items-center gap-x-1 px-2 py-1 hover:text-foreground text-muted-foreground transition-colors uppercase"
         >
           {lang}
-        </Link>
+        </a>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem asChild>

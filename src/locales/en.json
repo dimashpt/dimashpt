@@ -5,32 +5,35 @@
     "role": "Front End Developer"
   },
   "nav": {
-    "/": "_hello",
-    "/about": "_about.me",
-    "/contact": "_contact",
-    "/projects": "_projects",
-    "/articles": "_articles"
+    "home": "_hello",
+    "about": "_about.me",
+    "contact": "_contact",
+    "projects": "_projects",
+    "articles": "_articles"
   },
-  "/": {
+  "home": {
     "greeting": "Hi There! I am",
     "code_comment": "// you can also see it on my GitHub page",
-    "code_github": [
-      "const ",
-      "githubLink ",
-      "= ",
-      "https://github.com/dimashpt/dimashpt"
-    ]
+    "code_github": "const githubLink = \"https://github.com/dimashpt/dimashpt\""
   },
-  "/about": {
-    "greeting": "About Page"
+  "about": {
+    "menu": {
+      "title_profile": "Profile",
+      "title_contact": "Contact",
+      "item": {
+        "bio": "Bio",
+        "edu": "Education",
+        "exp": "Experience"
+      }
+    }
   },
-  "/contact": {
+  "contact": {
     "greeting": "Contact Page"
   },
-  "/projects": {
+  "projects": {
     "greeting": "Projects Page"
   },
-  "/articles": {
+  "articles": {
     "greeting": "Articles Page"
   }
 }

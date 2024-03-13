@@ -8,7 +8,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/atoms';
-import Link from 'next/link';
 import { Icons } from '@/assets';
 
 export const ThemeToggle: React.FC = () => {
@@ -17,12 +16,12 @@ export const ThemeToggle: React.FC = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Link
+        <a
           href="#"
           className="flex items-center gap-x-1 px-2 py-1 hover:text-foreground text-muted-foreground transition-colors"
         >
           {resolvedTheme === 'light' ? <Icons.Sun /> : <Icons.Moon />}
-        </Link>
+        </a>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme('light')}>

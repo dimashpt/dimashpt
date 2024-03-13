@@ -1,13 +1,13 @@
+import { CodeBlock } from '@/components/organisms';
 import { useTranslation } from '@/lib/i18n';
+import { NextPage } from 'next';
 
-const RootPage: React.FC<BasePageProps> = async ({
-  params: { lang },
-}: BasePageProps) => {
-  const { t } = await useTranslation(lang, '/');
+const RootPage: NextPage = async () => {
+  const { t } = await useTranslation('home');
 
   return (
-    <div className="content items-center justify-center">
-      <div className="flex flex-col">
+    <section className="flex flex-col h-full w-full items-center justify-center">
+      <div className="flex flex-col px-5 md:px-0">
         <p className="text-sm md:text-base text-muted-foreground">
           {t('greeting')}
         </p>
@@ -18,16 +18,13 @@ const RootPage: React.FC<BasePageProps> = async ({
           &gt; {t('common:role')}
         </h5>
         <div className="space-y-1 text-sm text-muted-foreground">
-          <p>{t('code_comment')}</p>
-          <p>
-            {Array.from({ length: 3 }).map((_, i) => (
-              <span key={i}>{t(`code_github.${i}`)}</span>
-            ))}
-            <a href={t('code_github.3')}>&quot;{t('code_github.3')}&quot;</a>
-          </p>
+          <CodeBlock
+            hideLines
+            code={`${t('code_comment')}\n${t('code_github')}`}
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

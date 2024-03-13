@@ -1,16 +1,16 @@
 import '#/public/globals.css';
 import Favicon from '#/public/favicon.ico';
-import type { Metadata } from 'next';
-import { Space_Mono } from 'next/font/google';
+import type { Metadata, NextPage } from 'next';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 import { ThemeProvider } from '@/components/atoms';
 import { Footer, Header } from '@/components/organisms';
-import { languages } from '@/lib/i18n';
 import { dir } from 'i18next';
 
-const font = Space_Mono({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-});
+type BaseLayoutProps = {
+  children: React.ReactNode;
+  params: { lang: string };
+};
 
 export const metadata: Metadata = {
   title: {
@@ -21,17 +21,13 @@ export const metadata: Metadata = {
   icons: [{ rel: 'icon', url: Favicon.src }],
 };
 
-export async function generateStaticParams(): Promise<{ lang: string }[]> {
-  return languages.map((lang) => ({ lang }));
-}
-
-export default function RootLayout({
+const RootLayout: NextPage<BaseLayoutProps> = ({
   children,
   params: { lang },
-}: BasePageProps & { children: React.ReactNode }): JSX.Element {
+}: BaseLayoutProps) => {
   return (
     <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
-      <body className={font.className}>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} font-mono`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -47,4 +43,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
