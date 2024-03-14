@@ -6,6 +6,7 @@ import { GeistMono } from 'geist/font/mono';
 import { ThemeProvider } from '@/components/atoms';
 import { Footer, Header } from '@/components/organisms';
 import { dir } from 'i18next';
+import { Analytics } from '@vercel/analytics/react';
 
 type BaseLayoutProps = {
   children: React.ReactNode;
@@ -38,6 +39,7 @@ const RootLayout: NextPage<BaseLayoutProps> = ({
             <Footer />
           </main>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
