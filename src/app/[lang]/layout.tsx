@@ -7,6 +7,7 @@ import { ThemeProvider } from '@/components/atoms';
 import { Footer, Header } from '@/components/organisms';
 import { dir } from 'i18next';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 type BaseLayoutProps = {
   children: React.ReactNode;
@@ -40,6 +41,7 @@ const RootLayout: NextPage<BaseLayoutProps> = ({
           </main>
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
