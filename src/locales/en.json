@@ -2,7 +2,8 @@
   "common": {
     "name": "Dimas Hayat Pratama",
     "username": "dimashpt",
-    "role": "Front End Developer"
+    "role": "Front End Developer",
+    "coming_soon": "🚧 This page is under construction"
   },
   "nav": {
     "home": "_hello",
@@ -14,7 +15,12 @@
   "home": {
     "greeting": "Hi There! I am",
     "code_comment": "// you can also see it on my GitHub page",
-    "code_github": "const githubLink = \"https://github.com/dimashpt/dimashpt\""
+    "code_github": [
+      "const ",
+      "githubLink ",
+      "= ",
+      "https://github.com/dimashpt/dimashpt"
+    ]
   },
   "about": {
     "menu": {

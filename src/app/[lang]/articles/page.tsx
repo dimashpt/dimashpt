@@ -10,7 +10,7 @@ const ArticlesPage: NextPage = async () => {
 
   return (
     <section className="flex flex-col flex-grow h-full w-full items-center justify-center">
-      <p>{t('greeting')}</p>
+      <p>{t('common:coming_soon')}</p>
     </section>
   );
 };
