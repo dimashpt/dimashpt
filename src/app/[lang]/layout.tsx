@@ -27,13 +27,11 @@ const RootLayout: NextPage<BaseLayoutProps> = ({
 }: BaseLayoutProps) => {
   return (
     <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
-      <body className={`${GeistSans.variable} ${GeistMono.variable} font-mono`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body
+        className={`${GeistSans.variable} ${GeistMono.variable} font-mono`}
+        suppressHydrationWarning
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main>
             <Header />
             {children}
