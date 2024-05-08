@@ -40,8 +40,8 @@ const RootLayout: NextPage<BaseLayoutProps> = ({
             <Footer />
           </main>
         </ThemeProvider>
-        <Analytics />
-        <SpeedInsights />
+        <Analytics debug={false} />
+        <SpeedInsights debug={false} />
       </body>
     </html>
   );
