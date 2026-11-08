@@ -15,10 +15,18 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - uses: pedrocatalao/github-cool-readme@v1
+      - uses: actions/setup-node@v4
         with:
-          token: ${{ secrets.CARDS_TOKEN }}
-          output: ${{ runner.temp }}/cards
+          node-version: 24
+      - name: Generate cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.CARDS_TOKEN }}
+        run: |
+          git clone --depth 1 --branch v1 https://github.com/pedrocatalao/github-cool-readme.git "$RUNNER_TEMP/cool-readme"
+          # A pull request node can be null when its repo is gone. v1 reads .repository and crashes.
+          sed -i 's/if (!n\.repository) continue;/if (!n?.repository) continue;/' "$RUNNER_TEMP/cool-readme/src/collect.ts"
+          npm ci --omit=dev --no-audit --no-fund --prefix "$RUNNER_TEMP/cool-readme"
+          node "$RUNNER_TEMP/cool-readme/src/cli.ts" --out "$RUNNER_TEMP/cards" --config cool-readme.yml
       # The cards live on their own branch, as a single commit replaced on each change, so they
       # don't add to the history of your main branch.
       - name: Publish the cards on the cards branch
