@@ -50,14 +50,37 @@ Beyond technical prowess, I thrive in collaborative environments, fueled by clea
 ![Postman](https://img.shields.io/badge/-Postman-05122A?style=flat&logo=postman)
 ![Figma](https://img.shields.io/badge/-Figma-05122A?style=flat&logo=figma)
 
-### ⚙️ Analytics
+### ⚙️ GitHub
 
+<!-- cool-readme:start -->
+<!-- Cards by github-cool-readme: https://github.com/pedrocatalao/github-cool-readme -->
 <p align="center">
-  <a href="https://github.com/dimashpt">
-    <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=dimashpt&show_icons=true&theme=algolia&include_all_commits=true&count_private=true">
-    <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=dimashpt&layout=compact&langs_count=8&theme=algolia">
-  </a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dimashpt/dimashpt/cards/about-dark.svg">
+  <img src="https://raw.githubusercontent.com/dimashpt/dimashpt/cards/about-light.svg" width="400" alt="About">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dimashpt/dimashpt/cards/summary-dark.svg">
+  <img src="https://raw.githubusercontent.com/dimashpt/dimashpt/cards/summary-light.svg" width="400" alt="GitHub stats">
+</picture>
 </p>
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dimashpt/dimashpt/cards/languages-dark.svg">
+  <img src="https://raw.githubusercontent.com/dimashpt/dimashpt/cards/languages-light.svg" width="400" alt="Most used languages">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dimashpt/dimashpt/cards/contributions-dark.svg">
+  <img src="https://raw.githubusercontent.com/dimashpt/dimashpt/cards/contributions-light.svg" width="400" alt="Notable contributions">
+</picture>
+</p>
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dimashpt/dimashpt/cards/weekly-dark.svg">
+  <img src="https://raw.githubusercontent.com/dimashpt/dimashpt/cards/weekly-light.svg" width="400" alt="Weekly rhythm">
+</picture>
+</p>
+<!-- cool-readme:end -->
 
 ### 🤝🏻 Connect with Me
 
