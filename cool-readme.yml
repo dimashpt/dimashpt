@@ -1,0 +1,24 @@
+# Settings: https://github.com/pedrocatalao/github-cool-readme#settings
+user: dimashpt
+
+show: [about, summary, languages, contributions, weekly]
+
+count:
+  private: true
+  orgs: true
+
+look:
+  style: classic
+  color: github
+  background: none
+
+cards:
+  about:
+    headline: "Hi, I'm *Dimas*"
+    lines:
+      - "Frontend developer turning complex ideas into clean interfaces."
+      - "React, React Native, and Flutter, plus Laravel when the work goes full stack."
+    facts:
+      "Based in": "Bandung, Indonesia"
+      Company: "Lobataros"
+      Site: "lobataros.com"
